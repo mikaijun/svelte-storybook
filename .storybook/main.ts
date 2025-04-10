@@ -9,7 +9,6 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/experimental-addon-test",
-    // see: https://github.com/storybookjs/addon-svelte-csf?tab=readme-ov-file#legacy-api
     {
 			name: '@storybook/addon-svelte-csf',
 			options: {
