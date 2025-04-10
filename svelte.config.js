@@ -4,6 +4,12 @@ import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	// XXX: compilerOptionsのrunesをfalseにするとstorybookが動かない
+	
+	// compilerOptions: {
+	// 	runes: false
+	// },
+
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), sveltePreprocess()],

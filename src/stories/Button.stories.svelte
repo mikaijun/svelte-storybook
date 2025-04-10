@@ -1,10 +1,9 @@
-<script module>
-  import { defineMeta } from '@storybook/addon-svelte-csf';
+<script lang="ts" context="module">
   import Button from './Button.svelte';
   import { fn } from '@storybook/test';
+  import { Story, Template } from '@storybook/addon-svelte-csf';
 
-  // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
-  const { Story } = defineMeta({
+  export const meta = {
     title: 'Example/Button',
     component: Button,
     tags: ['autodocs'],
@@ -18,10 +17,14 @@
     args: {
       onClick: fn(),
     }
-  });
+  };
+
 </script>
 
-<!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
+<Template let:args>
+  <Button {...args} />
+</Template>
+
 <Story name="Primary" args={{ primary: true, label: 'Button' }} />
 
 <Story name="Secondary" args={{ label: 'Button' }} />
