@@ -4,11 +4,10 @@ import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	compilerOptions: process.env.STORYBOOK ? {} : {
+	compilerOptions: {
 		runes: false
 	},
 	preprocess: [vitePreprocess(), sveltePreprocess()],
-
 	kit: {
 		adapter: adapter()
 	}
